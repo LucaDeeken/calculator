@@ -32,3 +32,10 @@ function divide (a, b) {
 const numberOne = "";
 const numberTwo = "";
 const operator = "";
+
+//operate function
+
+function operate (num, oper, num) {
+
+};
+
