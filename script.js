@@ -4,7 +4,6 @@
 function add(a, b){
 
     let sum = a+b;
-
     return sum;
 
 };
@@ -12,7 +11,6 @@ function add(a, b){
 function subtract (a, b) {
     
     let sub = a-b;
-
     return sub;
 
 };
@@ -20,12 +18,17 @@ function subtract (a, b) {
 function multiply (a, b) {
 
     let multi = a*b;
-
     return multi;
 };
 
 function divide (a, b) {
 
-    let divide = a / b;
+    let divide = a/b;
     return divide;
 };
+
+//variables for calc-operations
+
+const numberOne = "";
+const numberTwo = "";
+const operator = "";
