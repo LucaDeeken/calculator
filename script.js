@@ -1,12 +1,7 @@
 
 // functions for all of the basic math operators 
 
-function add(a, b){
 
-    let sum = a+b;
-    return sum;
-
-};
 
 function subtract (a, b) {
     
@@ -30,7 +25,7 @@ function divide (a, b) {
 //variables for calc-operations
 
 let x = "0";
-let y = 0;
+let y = "0";
 let operator = 0;
 
 //operate function
@@ -55,97 +50,174 @@ display.textContent = displayValue;
 const one = document.getElementsByClassName("one")[0];
 
 one.addEventListener("click", () => {
-    if (x!=="0") {
+    
+      if (y!=="0") {
+        y = String(y);
+        y = Number(y +"1");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 1;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"1");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 1;
+        display.textContent = x;
      };
-         display.textContent = 1;
+         console.log(x);
+         console.log(y);
 
 });
 
 const two = document.getElementsByClassName("two")[0];
 
 two.addEventListener("click", () => {
-         if (x!=="0") {
-            y = 2;
-         } else {
-            x = 2;
-         };
-         display.textContent = 2;
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"2");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
+        y = 2;
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"2");
+        display.textContent = x;
+     } else if (operator===0) {
+        x = 2;
+        display.textContent = x;
+     };
+         console.log(x);
+         console.log(y);
+
 
 });
 
 const three = document.getElementsByClassName("three")[0];
 
 three.addEventListener("click", () => {
-         if (x!=="0") {
-            y = 3;
-         } else {
-            x = 3;
-         };
-         console.log(x,y)
-         display.textContent = 3;
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"3");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
+        y = 3;
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"3");
+        display.textContent = x;
+     } else if (operator===0) {
+        x = 3;
+        display.textContent = x;
+     };
 
 });
 
 const four = document.getElementsByClassName("four")[0];
 
 four.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"4");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 4;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"4");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 4;
+        display.textContent = x;
      };
-         display.textContent = 4;
 
 });
 
 const five = document.getElementsByClassName("five")[0];
 
 five.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"5");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 5;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"5");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 5;
+        display.textContent = x;
      };
-         display.textContent = 5;
 
 });
 
 const six = document.getElementsByClassName("six")[0];
 
 six.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"6");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 6;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"6");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 6;
+        display.textContent = x;
      };
-         display.textContent = 6;
 
 });
 
 const seven = document.getElementsByClassName("seven")[0];
 
 seven.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"7");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 7;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"7");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 7;
+        display.textContent = x;
      };
-         display.textContent = 7;
 
 });
 
 const eight = document.getElementsByClassName("eight")[0];
 
 eight.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"8");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 8;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"8");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 8;
+        display.textContent = x;
      };
-         display.textContent = 8;
 
 
 });
@@ -153,34 +225,71 @@ eight.addEventListener("click", () => {
 const nine = document.getElementsByClassName("nine")[0];
 
 nine.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"9");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 9;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"9");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 9;
+        display.textContent = x;
      };
-         display.textContent = 9;
 
 });
 
 const zero = document.getElementsByClassName("zero")[0];
 
 zero.addEventListener("click", () => {
-    if (x!=="0") {
+    if (y!=="0") {
+        y = String(y);
+        y = Number(y +"0");
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
         y = 0;
-     } else {
+        display.textContent = y;
+     } else if (x!=="0" && operator===0) {
+        x = String(x);
+        x = Number(x +"0");
+        display.textContent = x;
+     } else if (operator===0) {
         x = 0;
-     }
-         display.textContent = 0;
+        display.textContent = x;
+     };
 
 });
 
 const plus = document.getElementsByClassName("plus")[0];
 
+let sum = 0;
 plus.addEventListener("click", () => {
          operator = "+";
-         display.textContent = "+";
 
-});
+        if (x ==="0" && y === "0") {
+            display.textContent = 0;
+        };
+        
+        let nix = "nix";
+        if (sum !==0 && y ==="0") {
+            nix = "Ich tue nichts, außer die null zu blockieren, hihi";
+        } else if (sum !==0) {
+            sum+= y;
+            display.textContent = sum;
+            y = "0"
+        } else if (x !=="0" && y !=="0") {
+            sum = x+y;
+            display.textContent = sum;
+            y = "0";
+    
+        };
+
+    });
+
 
 const minus = document.getElementsByClassName("minus")[0];
 
@@ -208,7 +317,61 @@ multi.addEventListener("click", () => {
 
 // Function for the result button
 
-//result function (x,y)
 
+const results = document.getElementsByClassName("result")[0];
+
+
+    
+
+ results.addEventListener ("click", () => {
+    if (x ==="0" && y === "0") {
+        display.textContent = 0;
+    };
+    
+    
+    if (operator ==="+"&& y ==="0") {
+        sum += x;
+        display.textContent = sum;
+    } else if (operator ==="+" && sum!==0) {
+        sum += y;
+        display.textContent = sum;
+        y = "0";
+        x = "0";
+        operator = 0;
+    }   else if (operator ==="+") {
+         sum = 0;
+              console.log(sum);
+         console.log(x);
+         console.log(y);
+         sum = x + y;
+         display.textContent = sum;
+         y = "0";
+         operator = 0;
+     };
+
+   if (operator ==="-"&& y ==="0") {
+        sum -= x;
+        display.textContent = sum;
+    } else if (operator ==="-") {
+        sum = x - y;
+        display.textContent = sum;
+        x = sum;
+        y = "0";
+        operator = 0;
+    };
+
+    if (operator ==="*"&& y ==="0") {
+        sum *= x;
+        display.textContent = sum;
+    } else if (operator ==="*") {
+        sum = x * y;
+        display.textContent = sum;
+        x = sum;
+        y = "0";
+        operator = "0";
+    };
+    
+
+});
 
 
