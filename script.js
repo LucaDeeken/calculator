@@ -42,9 +42,8 @@ const operator = "";
 
 
 
-// functions for buttons, which store the values of the pressed numbers & operators
+// function for display
 
-let array = [];
 
 let displayValue = 0;
 
@@ -63,9 +62,10 @@ display.textContent = displayValue;
 
 
 
+// functions for buttons, which store the values of the pressed numbers & operators
 
-
-let one1 = 0;
+let array = [];
+let x = 0;
 
 function displayNum () {
 
@@ -74,145 +74,118 @@ function displayNum () {
 }
 
 
-
+ 
 
 const one = document.getElementsByClassName("one")[0];
 
 one.addEventListener("click", () => {
-         one1 = 1;
-         array.push(one1);
-         display.textContent = one1;
+         x = 1;
+         display.textContent = x;
 
 });
 
-let two1 = 0;
 const two = document.getElementsByClassName("two")[0];
 
 two.addEventListener("click", () => {
-         two1 = 2;
-         array.push(two1);
-         display.textContent = two1;
+         x = 2;
+         display.textContent = x;
 
 });
 
-let three1 = 0;
 const three = document.getElementsByClassName("three")[0];
 
 three.addEventListener("click", () => {
-         three1 = 3;
-         array.push(three1);
-         display.textContent = three1;
+         x = 3;
+         display.textContent = x;
 
 });
 
-let four1 = 0;
 const four = document.getElementsByClassName("four")[0];
 
 four.addEventListener("click", () => {
-         four1 = 4;
-         array.push(four1);
-         display.textContent = four1;
+         x = 4;
+         display.textContent = x;
 
 });
 
-let five1 = 0;
 const five = document.getElementsByClassName("five")[0];
 
 five.addEventListener("click", () => {
-         five1 = 5;
-         array.push(five1);
-         display.textContent = five1;
+         x = 5;
+         display.textContent = x;
 
 });
 
-let six1 = 0;
 const six = document.getElementsByClassName("six")[0];
 
 six.addEventListener("click", () => {
-         six1 = 6;
-         array.push(six1);
-         display.textContent = six1;
+         x = 6;
+         display.textContent = x;
 
 });
 
-let seven1 = 0;
 const seven = document.getElementsByClassName("seven")[0];
 
 seven.addEventListener("click", () => {
-         seven1 = 7;
-         array.push(seven1);
-         display.textContent = seven1;
+         x = 7;
+         display.textContent = x;
 
 });
 
-let eight1 = 0;
 const eight = document.getElementsByClassName("eight")[0];
 
 eight.addEventListener("click", () => {
-         eight1 = 8;
-         array.push(eight1);
-         display.textContent = eight1;
+         x = 8;
+         display.textContent = x;
 
 
 });
 
-let nine1 = 0;
 const nine = document.getElementsByClassName("nine")[0];
 
 nine.addEventListener("click", () => {
-         nine1 = 9;
-         array.push(nine1);
-         display.textContent = nine1;
+         x = 9;
+         display.textContent = x;
 
 });
 
-let zero1 = 0;
 const zero = document.getElementsByClassName("zero")[0];
 
 zero.addEventListener("click", () => {
-         zero1 = 0;
-         array.push(zero1);
-         display.textContent = zero1;
+         x = 0;
+         display.textContent = x;
 
 });
 
-let plus1 = 0;
 const plus = document.getElementsByClassName("plus")[0];
 
 plus.addEventListener("click", () => {
-         plus1 = "+";
-         array.push(plus1);
-         display.textContent = plus1;
+         x = "+";
+         display.textContent = x;
 
 });
 
-let minus1 = 0;
 const minus = document.getElementsByClassName("minus")[0];
 
 minus.addEventListener("click", () => {
-         minus1 = "-";
-         array.push(minus1);
-         display.textContent = minus1;
+         x = "-";
+         display.textContent = x;
 
 });
 
-let divid1 = 0;
 const divid = document.getElementsByClassName("divid")[0];
 
 divid.addEventListener("click", () => {
-         divid1 = "/";
-         array.push(divid1);
-         display.textContent = divid1;
+         x = "/";
+         display.textContent = x;
 
 });
 
-let multi1 = 0;
 const multi = document.getElementsByClassName("multi")[0];
 
 multi.addEventListener("click", () => {
-         multi1 = "*";
-         array.push(multi1);
-         display.textContent = multi1;
+         x = "*";
+         display.textContent = x;
 
 });
 
