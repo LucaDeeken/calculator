@@ -88,9 +88,10 @@ one.addEventListener("click", () => {
 let two1 = 0;
 const two = document.getElementsByClassName("two")[0];
 
-one.addEventListener("click", () => {
+two.addEventListener("click", () => {
          two1 = 2;
          array.push(two1);
+         display.textContent = two1;
 
 });
 
@@ -100,6 +101,7 @@ const three = document.getElementsByClassName("three")[0];
 three.addEventListener("click", () => {
          three1 = 3;
          array.push(three1);
+         display.textContent = three1;
 
 });
 
@@ -109,6 +111,7 @@ const four = document.getElementsByClassName("four")[0];
 four.addEventListener("click", () => {
          four1 = 4;
          array.push(four1);
+         display.textContent = four1;
 
 });
 
@@ -118,15 +121,17 @@ const five = document.getElementsByClassName("five")[0];
 five.addEventListener("click", () => {
          five1 = 5;
          array.push(five1);
+         display.textContent = five1;
 
 });
 
 let six1 = 0;
 const six = document.getElementsByClassName("six")[0];
 
-one.addEventListener("click", () => {
+six.addEventListener("click", () => {
          six1 = 6;
          array.push(six1);
+         display.textContent = six1;
 
 });
 
@@ -136,6 +141,7 @@ const seven = document.getElementsByClassName("seven")[0];
 seven.addEventListener("click", () => {
          seven1 = 7;
          array.push(seven1);
+         display.textContent = seven1;
 
 });
 
@@ -145,6 +151,8 @@ const eight = document.getElementsByClassName("eight")[0];
 eight.addEventListener("click", () => {
          eight1 = 8;
          array.push(eight1);
+         display.textContent = eight1;
+
 
 });
 
@@ -154,6 +162,7 @@ const nine = document.getElementsByClassName("nine")[0];
 nine.addEventListener("click", () => {
          nine1 = 9;
          array.push(nine1);
+         display.textContent = nine1;
 
 });
 
@@ -163,6 +172,7 @@ const zero = document.getElementsByClassName("zero")[0];
 zero.addEventListener("click", () => {
          zero1 = 0;
          array.push(zero1);
+         display.textContent = zero1;
 
 });
 
@@ -172,6 +182,7 @@ const plus = document.getElementsByClassName("plus")[0];
 plus.addEventListener("click", () => {
          plus1 = "+";
          array.push(plus1);
+         display.textContent = plus1;
 
 });
 
@@ -181,6 +192,7 @@ const minus = document.getElementsByClassName("minus")[0];
 minus.addEventListener("click", () => {
          minus1 = "-";
          array.push(minus1);
+         display.textContent = minus1;
 
 });
 
@@ -190,6 +202,7 @@ const divid = document.getElementsByClassName("divid")[0];
 divid.addEventListener("click", () => {
          divid1 = "/";
          array.push(divid1);
+         display.textContent = divid1;
 
 });
 
@@ -199,6 +212,7 @@ const multi = document.getElementsByClassName("multi")[0];
 multi.addEventListener("click", () => {
          multi1 = "*";
          array.push(multi1);
+         display.textContent = multi1;
 
 });
 
