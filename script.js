@@ -16,6 +16,10 @@ let displayValue = 0;
 const display = document.getElementById("outerDisplay");
 display.textContent = displayValue;
 
+
+const MAX_LENGTH = 11111111111;  // Maximal 10 Ziffern
+
+
 // functions for buttons, which store the values of the pressed numbers & operators 
 
 const one = document.getElementsByClassName("one")[0];
@@ -32,9 +36,12 @@ one.addEventListener("mouseup", () => {
 
 one.addEventListener("click", () => {
 
+ 
 
-
-      if (y!=="0") {
+    if (x >= MAX_LENGTH || y > MAX_LENGTH || sum > MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+       else if (y!=="0") {
         y = String(y);
         y = Number(y +"1");
         display.textContent = y;
@@ -48,9 +55,10 @@ one.addEventListener("click", () => {
      } else if (operator===0) {
         x = 1;
         display.textContent = x;
-     };
+     }
          console.log(x);
          console.log(y);
+         console.log(MAX_LENGTH);
 
 });
 
@@ -65,7 +73,11 @@ two.addEventListener("mouseup", () => {
 });
 
 two.addEventListener("click", () => {
-    if (y!=="0") {
+   
+    if (x >= MAX_LENGTH || y > MAX_LENGTH || sum > MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"2");
         display.textContent = y;
