@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: rgb(250, 249, 238);
+    background-color: rgb(250, 249, 230);
     justify-content: center;
 }
 
@@ -8,11 +8,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 800px;
+    height: 750px;
     width: 550px;
     background-color: rgb(245, 206, 242);
     margin-top: 150px;
-    border: 10px solid black;
+    border: 7px solid black;
     border-radius: 20px;
     
 }
@@ -20,13 +20,14 @@ body {
 #outerDisplay {
     display: flex;
     background-color: rgb(255, 255, 255);
-    min-height: 200px;
+    min-height: 110px;
     width: 450px;
-    margin-top: 50px;
+    margin-top: 80px;
     margin-bottom: 80px;
-    border: 7px solid black;
+    padding-right: 25px;
+    border: 5px solid black;
     border-radius: 10px;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     font-size: 65px;
     font-weight: bold;
@@ -39,6 +40,7 @@ body {
     height: 430px;
     width: 500px;
     margin-bottom: 12.5px;
+    margin-top: 10px;
 }
 
 #numbersAndOperators {
