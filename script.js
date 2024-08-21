@@ -28,13 +28,6 @@ let x = "0";
 let y = "0";
 let operator = 0;
 
-//operate function
-
-//function operate (num, oper, num) {
-
-// };
-
-
 
 
 // function for display
