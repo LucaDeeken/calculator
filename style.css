@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: rgb(250, 249, 230);
+    background-color: rgb(250, 249, 238);
     justify-content: center;
 }
 
@@ -10,7 +10,7 @@ body {
     align-items: center;
     height: 800px;
     width: 550px;
-    background-color: rgb(252, 192, 247);
+    background-color: rgb(245, 206, 242);
     margin-top: 150px;
     border: 7px solid black;
     border-radius: 20px;
@@ -99,6 +99,10 @@ border-left: 0px solid black;
     background-color: rgb(192, 248, 214);
 }
 
-.plus, .minus, .divid, .multi, .result, .undo {
-    background-color: rgb(255, 241, 159);
+.result, .undo {
+    background-color: rgb(154, 193, 230);
+}
+
+.plus, .minus, .divid, .multi {
+    background-color: rgb(187, 187, 243);
 }
