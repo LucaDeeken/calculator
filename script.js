@@ -321,6 +321,43 @@ zero.addEventListener("click", () => {
 
 });
 
+const com = document.getElementsByClassName("com")[0];
+
+com.addEventListener("mousedown", () => {
+com.style.backgroundColor = "rgb(127, 211, 161)";
+});
+
+com.addEventListener("mouseup", () => {
+    com.style.backgroundColor = "rgb(192, 248, 214)";
+});
+
+com.addEventListener("click", () => {
+    
+    if (y.toString().includes(".")) {
+        nothing = "nope, you can't create a number with two dots.";
+        console.log(y);
+        console.log(x);
+    } else if (y!=="0") {
+        y = y +".";
+        display.textContent = y;
+    } else if (x!=="0" && operator!==0) {
+        y = y+".";
+        display.textContent = y;
+     } else if (x.toString().includes(".")) {
+        nothing = "nope";
+    }  else if (x!=="0" && operator===0) {
+        x = x +".";
+        display.textContent = x;
+     } else if (operator===0) {
+        x =  x +".";
+        display.textContent = x;
+     };
+
+});
+
+
+
+
 const plus = document.getElementsByClassName("plus")[0];
 
 let sum = "0";
