@@ -595,4 +595,22 @@ const results = document.getElementsByClassName("result")[0];
 
 });
 
+const clear = document.getElementsByClassName("undo")[0];
+clear.addEventListener("click", () => {
+
+plusOperator = false;
+minusOperator = false;
+dividOperator = false;
+multiOperator = false;
+x = "0";
+y = "0";
+sum = "0";
+operator = 0;
+display.textContent = sum;
+
+
+
+
+});
+
 
