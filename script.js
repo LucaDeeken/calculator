@@ -89,8 +89,6 @@ two.addEventListener("click", () => {
         x = 2;
         display.textContent = x;
      };
-         console.log(x);
-         console.log(y);
 
 
 });
@@ -266,21 +264,68 @@ zero.addEventListener("click", () => {
 
 const plus = document.getElementsByClassName("plus")[0];
 
-let sum = 0;
+let sum = "0";
+let plusOperator = false;
+let minusOperator = false;
+let dividOperator = false;
+let multiOperator = false;
+let nothing = "I'm doing nothing";
 plus.addEventListener("click", () => {
-         operator = "+";
+        operator = "+";
+        plusOperator = true;
 
+        // if construct for avoiding double-zero-error
         if (x ==="0" && y === "0") {
             display.textContent = 0;
         };
         
-        let nix = "nix";
+        // if constructions for inclucding the previous calculations
+        if (sum !=="0" && minusOperator === true) {
+            sum-= y;
+            display.textContent = sum;
+            y = "0";
+            minusOperator = false;
+        } else if (x !=="0" && y !=="0" && minusOperator === true) {
+            sum = x-y;
+            display.textContent = sum;
+            y = "0";
+            minusOperator = false;
+    
+        };
+
+        if (sum !=="0" && dividOperator === true ) {
+            sum/= y;
+            display.textContent = sum;
+            y = "0";
+            dividOperator = false;
+        } else if (dividOperator === true && x !=="0" && y !=="0") {
+            sum = x/y;
+            display.textContent = sum;
+            y = "0";
+            dividOperator = false;
+        };
+
+        if (sum !=="0" && multiOperator === true ) {
+            sum*= y;
+            display.textContent = sum;
+            y = "0";
+            multiOperator = false;
+        } else if (multiOperator === true && x !=="0" && y !=="0") {
+            sum = x*y;
+            display.textContent = sum;
+            y = "0";
+            multiOperator = false;
+        };
+
+    // if-tree starting with two conditions, which again prevent the double-zero error, then including the calculations associated with the operations-button
         if (sum !==0 && y ==="0") {
-            nix = "Ich tue nichts, außer die null zu blockieren, hihi";
-        } else if (sum !==0) {
+            nothing = "I'm doing nothing except blocking the zero, hihi";
+        } else if (sum === 0 && y === "0") {
+            nothing ="again?";      
+        } else if (sum !=="0") {
             sum+= y;
             display.textContent = sum;
-            y = "0"
+            y = "0";
         } else if (x !=="0" && y !=="0") {
             sum = x+y;
             display.textContent = sum;
@@ -294,24 +339,205 @@ plus.addEventListener("click", () => {
 const minus = document.getElementsByClassName("minus")[0];
 
 minus.addEventListener("click", () => {
-         operator = "-";
-         display.textContent = "-";
+    operator = "-";
+    minusOperator = true;
+
+    // if construct for avoiding double-zero-error
+    if (x ==="0" && y === "0") {
+        display.textContent = 0;
+    };
+
+    // if constructions for inclucding the previous calculations
+    if (sum !=="0" && plusOperator === true ) {
+    sum+= y;
+    display.textContent = sum;
+    y = "0";
+    plusOperator = false;
+    } else if (plusOperator === true && x !=="0" && y !=="0") {
+        sum = x+y;
+        display.textContent = sum;
+        y = "0";
+        plusOperator = false;
+    };
+
+    if (sum !=="0" && dividOperator === true ) {
+        sum/= y;
+        display.textContent = sum;
+        y = "0";
+        dividOperator = false;
+    } else if (dividOperator === true && x !=="0" && y !=="0") {
+        sum = x/y;
+        display.textContent = sum;
+        y = "0";
+        dividOperator = false;
+    };
+
+    if (sum !=="0" && multiOperator === true ) {
+        sum*= y;
+        display.textContent = sum;
+        y = "0";
+        multiOperator = false;
+    } else if (multiOperator === true && x !=="0" && y !=="0") {
+        sum = x*y;
+        display.textContent = sum;
+        y = "0";
+        multiOperator = false;
+    };
+    
+    // if-tree starting with two conditions, which again prevent the double-zero error, then including the calculations associated with the operations-button
+    if (sum !==0 && y ==="0") {
+        nothing = "Ich tue nichts, außer die null zu blockieren, hihi";
+    } else if (sum === 0 && y === "0") {
+        nothing ="again?";
+    } else if (sum !=="0") {
+        sum-= y;
+        display.textContent = sum;
+        y = "0";
+    } else if (x !=="0" && y !=="0") {
+        sum = x-y;
+        display.textContent = sum;
+        y = "0";
+    
+    };
 
 });
 
 const divid = document.getElementsByClassName("divid")[0];
 
 divid.addEventListener("click", () => {
-         operator = "/";
-         display.textContent = "/";
+    operator = "/";
+  
+    dividOperator = true;
+
+    // if construct for avoiding double-zero-error
+    if (x ==="0" && y === "0") {
+    display.textContent = 0;
+    };
+     
+    // if constructions for inclucding the previous calculations
+    if (sum !=="0" && plusOperator === true ) {
+        sum+= y;
+        display.textContent = sum;
+        y = "0";
+        plusOperator = false;
+    } else if (plusOperator === true && x !=="0" && y !=="0") {
+        sum = x+y;
+        display.textContent = sum;
+        y = "0";
+        plusOperator = false;
+    };
+     
+
+    if (sum !=="0" && minusOperator === true) {
+        sum-= y;
+        display.textContent = sum;
+        y = "0";
+        minusOperator = false;
+    } else if (x !=="0" && y !=="0" && minusOperator === true) {
+        sum = x-y;
+        display.textContent = sum;
+        y = "0";
+        minusOperator = false;
+
+    };
+
+    if (sum !=="0" && multiOperator === true ) {
+        sum*= y;
+        display.textContent = sum;
+        y = "0";
+        multiOperator = false;
+    } else if (multiOperator === true && x !=="0" && y !=="0") {
+        sum = x*y;
+        display.textContent = sum;
+        y = "0";
+        multiOperator = false;
+    };
+
+
+    // if-tree starting with two conditions, which again prevent the double-zero error, then including the calculations associated with the operations-button
+    if (sum !==0 && y ==="0") {
+        nothing = "I'm doing nothing except blocking the zero, hihi";
+    } else if (sum === 0 && y === "0") {
+        nothing ="again?";
+    } else if (sum !=="0") {
+        sum/= y;
+        display.textContent = sum;
+        y = "0";
+    } else if (x !=="0" && y !=="0") {
+        sum = x/y;
+        display.textContent = sum;
+        y = "0";
+         
+    };
 
 });
 
 const multi = document.getElementsByClassName("multi")[0];
 
 multi.addEventListener("click", () => {
-         operator = "*";
-         display.textContent = "*";
+    operator = "*";
+    multiOperator = true;
+
+    // if construct for avoiding double-zero-error
+    if (x ==="0" && y === "0") {
+        display.textContent = 0;
+    };
+          
+    // if constructions for inclucding the previous calculations
+    if (sum !=="0" && plusOperator === true ) {
+        sum+= y;
+        display.textContent = sum;
+        y = "0";
+        plusOperator = false;
+    } else if (plusOperator === true && x !=="0" && y !=="0") {
+        sum = x+y;
+        display.textContent = sum;
+        y = "0";
+        plusOperator = false;
+    };
+          
+     
+    if (sum !=="0" && minusOperator === true) {
+        sum-= y;
+        display.textContent = sum;
+        y = "0";
+        minusOperator = false;
+    } else if (x !=="0" && y !=="0" && minusOperator === true) {
+        sum = x-y;
+        display.textContent = sum;
+        y = "0";
+        minusOperator = false;
+     
+    };
+
+    if (sum !=="0" && dividOperator === true ) {
+        sum/= y;
+        display.textContent = sum;
+        y = "0";
+        dividOperator = false;
+    } else if (dividOperator === true && x !=="0" && y !=="0") {
+        sum = x/y;
+        display.textContent = sum;
+        y = "0";
+        dividOperator = false;
+    };
+     
+    
+    // if-tree starting with two conditions, which again prevent the double-zero error, then including the calculations associated with the operations-button
+    if (sum !==0 && y ==="0") {
+        nothing = "I'm doing nothing except blocking the zero, hihi";
+    } else if (sum === 0 && y === "0") {
+        nothing ="again?";
+    } else if (sum !=="0") {
+        sum*= y;
+        display.textContent = sum;
+        y = "0";
+    } else if (x !=="0" && y !=="0") {
+        sum = x*y;
+        display.textContent = sum;
+        y = "0";
+              
+    };
 
 });
 
@@ -324,54 +550,7 @@ const results = document.getElementsByClassName("result")[0];
     
 
  results.addEventListener ("click", () => {
-    if (x ==="0" && y === "0") {
-        display.textContent = 0;
-    };
-    
-    
-    if (operator ==="+"&& y ==="0") {
-        sum += x;
-        display.textContent = sum;
-    } else if (operator ==="+" && sum!==0) {
-        sum += y;
-        display.textContent = sum;
-        y = "0";
-        x = "0";
-        operator = 0;
-    }   else if (operator ==="+") {
-         sum = 0;
-              console.log(sum);
-         console.log(x);
-         console.log(y);
-         sum = x + y;
-         display.textContent = sum;
-         y = "0";
-         operator = 0;
-     };
-
-   if (operator ==="-"&& y ==="0") {
-        sum -= x;
-        display.textContent = sum;
-    } else if (operator ==="-") {
-        sum = x - y;
-        display.textContent = sum;
-        x = sum;
-        y = "0";
-        operator = 0;
-    };
-
-    if (operator ==="*"&& y ==="0") {
-        sum *= x;
-        display.textContent = sum;
-    } else if (operator ==="*") {
-        sum = x * y;
-        display.textContent = sum;
-        x = sum;
-        y = "0";
-        operator = "0";
-    };
-    
-
+  
 });
 
 
