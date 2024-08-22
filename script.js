@@ -17,7 +17,7 @@ const display = document.getElementById("outerDisplay");
 display.textContent = displayValue;
 
 
-const MAX_LENGTH = 11111111111;  // Maximal 10 Ziffern
+const MAX_LENGTH = 11; 
 
 
 // functions for buttons, which store the values of the pressed numbers & operators 
@@ -38,7 +38,7 @@ one.addEventListener("click", () => {
 
  
 
-    if (x >= MAX_LENGTH || y > MAX_LENGTH || sum > MAX_LENGTH) {
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
         display.textContent = "Num too big";
     }
        else if (y!=="0") {
@@ -74,7 +74,7 @@ two.addEventListener("mouseup", () => {
 
 two.addEventListener("click", () => {
    
-    if (x >= MAX_LENGTH || y > MAX_LENGTH || sum > MAX_LENGTH) {
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
         display.textContent = "Num too big";
     }
     else if (y!=="0") {
@@ -108,7 +108,11 @@ three.addEventListener("mouseup", () => {
 
 
 three.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+     else if (y!=="0") {
         y = String(y);
         y = Number(y +"3");
         display.textContent = y;
@@ -137,7 +141,11 @@ four.addEventListener("mouseup", () => {
 });
 
 four.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"4");
         display.textContent = y;
@@ -168,7 +176,11 @@ five.addEventListener("mouseup", () => {
 
 
 five.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"5");
         display.textContent = y;
@@ -197,7 +209,11 @@ six.addEventListener("mouseup", () => {
 });
 
 six.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"6");
         display.textContent = y;
@@ -226,7 +242,11 @@ seven.addEventListener("mousedown", () => {
     });
 
 seven.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"7");
         display.textContent = y;
@@ -255,7 +275,11 @@ eight.addEventListener("mousedown", () => {
     });
 
 eight.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"8");
         display.textContent = y;
@@ -285,7 +309,11 @@ nine.addEventListener("mouseup", () => {
 });
 
 nine.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"9");
         display.textContent = y;
@@ -315,7 +343,11 @@ zero.addEventListener("mouseup", () => {
 
 
 zero.addEventListener("click", () => {
-    if (y!=="0") {
+    
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y!=="0") {
         y = String(y);
         y = Number(y +"0");
         display.textContent = y;
@@ -345,7 +377,10 @@ com.addEventListener("mouseup", () => {
 
 com.addEventListener("click", () => {
     
-    if (y.toString().includes(".")) {
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    }
+    else if (y.toString().includes(".")) {
         nothing = "nope, you can't create a number with two dots.";
         console.log(y);
         console.log(x);
