@@ -101,7 +101,7 @@ border-left: 0px solid black;
     
 }
 
-.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .zero, .smile, .com {
+.number, .smile, .com {
     background-color: rgb(192, 248, 214);
 }
 
