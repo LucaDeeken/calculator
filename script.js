@@ -492,6 +492,9 @@ plus.addEventListener("click", () => {
     
         };
 
+        if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+            display.textContent = "Num too big";
+        };
     });
 
 
@@ -574,7 +577,9 @@ minus.addEventListener("click", () => {
         y = "0";
     
     };
-
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    };
 });
 
 const divid = document.getElementsByClassName("divid")[0];
@@ -661,6 +666,9 @@ divid.addEventListener("click", () => {
          
     };
 
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    };
 });
 
 const multi = document.getElementsByClassName("multi")[0];
@@ -745,7 +753,9 @@ multi.addEventListener("click", () => {
         y = "0";
               
     };
-
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    };
 });
 
 // Function for the result button
@@ -846,6 +856,9 @@ results.addEventListener("mousedown", () => {
               
     };
 
+    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+        display.textContent = "Num too big";
+    };
 });
 
 const clear = document.getElementsByClassName("undo")[0];
