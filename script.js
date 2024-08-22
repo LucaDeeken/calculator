@@ -347,15 +347,15 @@ zero.addEventListener("click", () => {
         display.textContent = "Num too big";
     }
     else if (y!=="0") {
-        y = String(y);
-        y = Number(y +"0");
+        y = String(y + "0");
+        console.log(y);
         display.textContent = y;
     } else if (x!=="0" && operator!==0) {
         y = 0;
         display.textContent = y;
      } else if (x!=="0" && operator===0) {
-        x = String(x);
-        x = Number(x +"0");
+        x = String(x + "0");
+        console.log(y);
         display.textContent = x;
      } else if (operator===0) {
         x = 0;
@@ -432,13 +432,13 @@ plus.addEventListener("click", () => {
         
         // if constructions for inclucding the previous calculations
         if (sum !=="0" && minusOperator === true) {
-            sum-= y;
+            sum-= Number(y);
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
             minusOperator = false;
         } else if (x !=="0" && y !=="0" && minusOperator === true) {
-            sum = x-y;
+            sum = (Number(x)-Number(y));
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
@@ -447,13 +447,13 @@ plus.addEventListener("click", () => {
         };
 
         if (sum !=="0" && dividOperator === true ) {
-            sum/= y;
+            sum/= Number(y);
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
             dividOperator = false;
         } else if (dividOperator === true && x !=="0" && y !=="0") {
-            sum = x/y;
+            sum = (Number(x)/Number(y));
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
@@ -461,13 +461,13 @@ plus.addEventListener("click", () => {
         };
 
         if (sum !=="0" && multiOperator === true ) {
-            sum*= y;
+            sum*= Number(y);
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
             multiOperator = false;
         } else if (multiOperator === true && x !=="0" && y !=="0") {
-            sum = x*y;
+            sum = (Number(x)*Number(y));
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
@@ -480,12 +480,12 @@ plus.addEventListener("click", () => {
         } else if (sum === 0 && y === "0") {
             nothing ="again?";      
         } else if (sum !=="0") {
-            sum+= y;
+            sum+= Number(y);
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
         } else if (x !=="0" && y !=="0") {
-            sum = x+y;
+            sum = (Number(x)+Number(y));
             sum = Math.round(sum *1000) / 1000;
             display.textContent = sum;
             y = "0";
@@ -516,13 +516,13 @@ minus.addEventListener("click", () => {
 
     // if constructions for inclucding the previous calculations
     if (sum !=="0" && plusOperator === true ) {
-    sum+= y;
+    sum+= Number(y);
     sum = Math.round(sum *1000) / 1000;
     display.textContent = sum;
     y = "0";
     plusOperator = false;
     } else if (plusOperator === true && x !=="0" && y !=="0") {
-        sum = x+y;
+        sum = (Number(x)+Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -530,13 +530,13 @@ minus.addEventListener("click", () => {
     };
 
     if (sum !=="0" && dividOperator === true ) {
-        sum/= y;
+        sum/= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         dividOperator = false;
     } else if (dividOperator === true && x !=="0" && y !=="0") {
-        sum = x/y;
+        sum = (Number(x)/Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -544,13 +544,13 @@ minus.addEventListener("click", () => {
     };
 
     if (sum !=="0" && multiOperator === true ) {
-        sum*= y;
+        sum*= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         multiOperator = false;
     } else if (multiOperator === true && x !=="0" && y !=="0") {
-        sum = x*y;
+        sum = (Number(x)*Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -563,12 +563,12 @@ minus.addEventListener("click", () => {
     } else if (sum === 0 && y === "0") {
         nothing ="again?";
     } else if (sum !=="0") {
-        sum-= y;
+        sum-= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = x-y;
+        sum = (Number(x)-Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -599,13 +599,13 @@ divid.addEventListener("click", () => {
      
     // if constructions for inclucding the previous calculations
     if (sum !=="0" && plusOperator === true ) {
-        sum+= y;
+        sum+= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         plusOperator = false;
     } else if (plusOperator === true && x !=="0" && y !=="0") {
-        sum = x+y;
+        sum = (Number(x)+Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -614,13 +614,13 @@ divid.addEventListener("click", () => {
      
 
     if (sum !=="0" && minusOperator === true) {
-        sum-= y;
+        sum-= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         minusOperator = false;
     } else if (x !=="0" && y !=="0" && minusOperator === true) {
-        sum = x-y;
+        sum = (Number(x)-Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -629,13 +629,13 @@ divid.addEventListener("click", () => {
     };
 
     if (sum !=="0" && multiOperator === true ) {
-        sum*= y;
+        sum*= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         multiOperator = false;
     } else if (multiOperator === true && x !=="0" && y !=="0") {
-        sum = x*y;
+        sum = (Number(x)*Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -649,12 +649,12 @@ divid.addEventListener("click", () => {
     } else if (sum === 0 && y === "0") {
         nothing ="again?";
     } else if (sum !=="0") {
-        sum/= y;
+        sum/= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = x/y;
+        sum = (Number(x)/Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -684,13 +684,13 @@ multi.addEventListener("click", () => {
           
     // if constructions for inclucding the previous calculations
     if (sum !=="0" && plusOperator === true ) {
-        sum+= y;
+        sum+= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         plusOperator = false;
     } else if (plusOperator === true && x !=="0" && y !=="0") {
-        sum = x+y;
+        sum = (Number(x)+Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -699,13 +699,13 @@ multi.addEventListener("click", () => {
           
      
     if (sum !=="0" && minusOperator === true) {
-        sum-= y;
+        sum-= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         minusOperator = false;
     } else if (x !=="0" && y !=="0" && minusOperator === true) {
-        sum = x-y;
+        sum = (Number(x)-Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -714,13 +714,13 @@ multi.addEventListener("click", () => {
     };
 
     if (sum !=="0" && dividOperator === true ) {
-        sum/= y;
+        sum/= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         dividOperator = false;
     } else if (dividOperator === true && x !=="0" && y !=="0") {
-        sum = x/y;
+        sum = (Number(x)/Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -734,12 +734,12 @@ multi.addEventListener("click", () => {
     } else if (sum === 0 && y === "0") {
         nothing ="again?";
     } else if (sum !=="0") {
-        sum*= y;
+        sum*= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = x*y;
+        sum = (Number(x)*Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -770,13 +770,13 @@ results.addEventListener("mousedown", () => {
           
     // if constructions for inclucding the previous calculations
     if (sum !=="0" && plusOperator === true ) {
-        sum+= y;
+        sum+= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         plusOperator = false;
     } else if (plusOperator === true && x !=="0" && y !=="0") {
-        sum = x+y;
+        sum = (Number(x)+Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -785,13 +785,13 @@ results.addEventListener("mousedown", () => {
           
      
     if (sum !=="0" && minusOperator === true) {
-        sum-= y;
+        sum-= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         minusOperator = false;
     } else if (x !=="0" && y !=="0" && minusOperator === true) {
-        sum = x-y;
+        sum = (Number(x)-Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -800,13 +800,13 @@ results.addEventListener("mousedown", () => {
     };
 
     if (sum !=="0" && dividOperator === true ) {
-        sum/= y;
+        sum/= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         dividOperator = false;
     } else if (dividOperator === true && x !=="0" && y !=="0") {
-        sum = x/y;
+        sum = (Number(x)/Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -814,13 +814,13 @@ results.addEventListener("mousedown", () => {
     };
 
     if (sum !=="0" && multiOperator === true ) {
-        sum*= y;
+        sum*= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
         multiOperator = false;
     } else if (multiOperator === true && x !=="0" && y !=="0") {
-        sum = x*y;
+        sum = (Number(x)*Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
@@ -834,12 +834,12 @@ results.addEventListener("mousedown", () => {
     } else if (sum === 0 && y === "0") {
         nothing ="again?";
     } else if (sum !=="0") {
-        sum*= y;
+        sum*= Number(y);
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = x*y;
+        sum = (Number(x)*Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
         y = "0";
