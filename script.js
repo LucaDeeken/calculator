@@ -12,13 +12,10 @@ const MAX_LENGTH = 11;
 // functions for buttons, which store the values of the pressed numbers & operators 
 const numbers = document.getElementsByClassName("number");
 for (let i = 0; i < numbers.length; i++) {
-
     numbers[i].addEventListener("click",() => {
-   
         if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
             display.textContent = "Num too big";
-        }
-        else if (y!=="0") {
+        } else if (y!=="0") {
             y = String(y +numbers[i].textContent);
             display.textContent = y;
         } else if (x!=="0" && operator!==0) {
@@ -36,7 +33,6 @@ for (let i = 0; i < numbers.length; i++) {
 
 const numberColor = document.getElementsByClassName("numberColor");
 for (let i = 0; i < numberColor.length; i++) {
-
     numberColor[i].addEventListener("mousedown", () => {
         numberColor[i].style.backgroundColor = "rgb(127, 211, 161)";
     });
@@ -46,12 +42,10 @@ for (let i = 0; i < numberColor.length; i++) {
 };
 
 const com = document.getElementsByClassName("com")[0];
-com.addEventListener("click", () => {
-    
+com.addEventListener("click", () => {  
     if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
         display.textContent = "Num too big";
-    }
-    else if (y.toString().includes(".")) {
+    } else if (y.toString().includes(".")) {
         nothing = "nope, you can't create a number with two dots.";
     } else if (y!=="0") {
         y = y +".";
@@ -74,8 +68,7 @@ const operatorColor = document.getElementsByClassName("operator");
 for (let i = 0; i < operatorColor.length; i++) {
     operatorColor[i].addEventListener("mousedown", () => {
         operatorColor[i].style.backgroundColor = "rgb(140, 140, 236)";
-        });
-        
+        });     
     operatorColor[i].addEventListener("mouseup", () => {
         operatorColor[i].style.backgroundColor = "rgb(187, 187, 243)";
         });
@@ -96,8 +89,7 @@ function plusCalc () {
         y = "0";
         plusOperator = false;
     } else if (plusOperator === true && x !=="0" && y !=="0") {
-        sum = (Number(x)+Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = Math.round((Number(x)+Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0";
         plusOperator = false;
@@ -112,12 +104,10 @@ function minusCalc () {
         y = "0";
         minusOperator = false;
     } else if (x !=="0" && y !=="0" && minusOperator === true) {
-        sum = (Number(x)-Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = Math.round((Number(x)-Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0";
         minusOperator = false;
-
     };
 };
 
@@ -129,8 +119,7 @@ function dividCalc () {
         y = "0";
         dividOperator = false;
     } else if (dividOperator === true && x !=="0" && y !=="0") {
-        sum = (Number(x)/Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = Math.round((Number(x)/Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0";
         dividOperator = false;
@@ -145,8 +134,7 @@ function multiCalc () {
         y = "0";
         multiOperator = false;
     } else if (multiOperator === true && x !=="0" && y !=="0") {
-        sum = (Number(x)*Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = Math.round((Number(x)*Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0";
         multiOperator = false;
@@ -166,32 +154,31 @@ function numTooBig () {
 };
 
 const plus = document.getElementsByClassName("plus")[0];
-    plus.addEventListener("click", () => {
-        operator = "+";
-        plusOperator = true;
-        avoidDoubleZeroError ()  
-        // if constructions for inclucding the previous calculations
-        minusCalc ();
-        dividCalc ();
-        multiCalc ();
-        // if-tree starting with two conditions, which again prevent the double-zero error, then including the calculations associated with the operations-button
-        if (sum !==0 && y ==="0") {
-            nothing = "I'm doing nothing except blocking the zero, hihi";
-        } else if (sum === 0 && y === "0") {
-            nothing ="again?";      
-        } else if (sum !=="0") {
-            sum+= Number(y);
-            sum = Math.round(sum *1000) / 1000;
-            display.textContent = sum;
-            y = "0";
-        } else if (x !=="0" && y !=="0") {
-            sum = (Number(x)+Number(y));
-            sum = Math.round(sum *1000) / 1000;
-            display.textContent = sum;
-            y = "0";
-        };
-        numTooBig ();
-    });
+plus.addEventListener("click", () => {
+    operator = "+";
+    plusOperator = true;
+    avoidDoubleZeroError ()  
+    // if constructions for inclucding the previous calculations
+    minusCalc ();
+    dividCalc ();
+    multiCalc ();
+    // if-tree starting with two conditions, which again prevent the double-zero error, then including the calculations associated with the operations-button
+    if (sum !==0 && y ==="0") {
+        nothing = "I'm doing nothing except blocking the zero, hihi";
+    } else if (sum === 0 && y === "0") {
+        nothing ="again?";      
+    } else if (sum !=="0") {
+        sum+= Number(y);
+        sum = Math.round(sum *1000) / 1000;
+        display.textContent = sum;
+        y = "0";
+    } else if (x !=="0" && y !=="0") {
+        sum = Math.round((Number(x)+Number(y))*1000) / 1000;
+        display.textContent = sum;
+        y = "0";
+    };
+    numTooBig ();
+});
 
 const minus = document.getElementsByClassName("minus")[0];
 minus.addEventListener("click", () => {
@@ -212,8 +199,7 @@ minus.addEventListener("click", () => {
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = (Number(x)-Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = sum = Math.round((Number(x)-Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0"; 
     };
@@ -239,8 +225,7 @@ divid.addEventListener("click", () => {
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = (Number(x)/Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = Math.round((Number(x)/Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0";       
     };
@@ -266,8 +251,7 @@ multi.addEventListener("click", () => {
         display.textContent = sum;
         y = "0";
     } else if (x !=="0" && y !=="0") {
-        sum = (Number(x)*Number(y));
-        sum = Math.round(sum *1000) / 1000;
+        sum = Math.round((Number(x)*Number(y))*1000) / 1000;
         display.textContent = sum;
         y = "0";        
     };
@@ -288,7 +272,6 @@ for (let i=0; i< resultACColor.length; i++) {
 
 const results = document.getElementsByClassName("result")[0];
 results.addEventListener ("click", () => {
-  
     avoidDoubleZeroError ();
     plusCalc ();
     minusCalc ();
@@ -299,7 +282,6 @@ results.addEventListener ("click", () => {
 
 const clear = document.getElementsByClassName("undo")[0];
 clear.addEventListener("click", () => {
-
     plusOperator = false;
     minusOperator = false;
     dividOperator = false;
