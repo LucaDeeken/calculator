@@ -3,7 +3,7 @@ let x = "0";
 let y = "0";
 let operator = 0;
 
-// function for display
+// values for the display
 let displayValue = 0;
 const display = document.getElementById("outerDisplay");
 display.textContent = displayValue;
@@ -15,22 +15,22 @@ for (let i = 0; i < numbers.length; i++) {
 
     numbers[i].addEventListener("click",() => {
    
-    if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
-        display.textContent = "Num too big";
-    }
-       else if (y!=="0") {
-        y = String(y +numbers[i].textContent);
-        display.textContent = y;
-    } else if (x!=="0" && operator!==0) {
-        y = numbers[i].textContent;
-        display.textContent = y;
-     } else if (x!=="0" && operator===0) {
-        x = String(x + numbers[i].textContent);
-        display.textContent = x;
-     } else if (operator===0) {
-        x = numbers[i].textContent;
-        display.textContent = x;
-     };
+        if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
+            display.textContent = "Num too big";
+        }
+        else if (y!=="0") {
+            y = String(y +numbers[i].textContent);
+            display.textContent = y;
+        } else if (x!=="0" && operator!==0) {
+            y = numbers[i].textContent;
+            display.textContent = y;
+        } else if (x!=="0" && operator===0) {
+            x = String(x + numbers[i].textContent);
+            display.textContent = x;
+        } else if (operator===0) {
+            x = numbers[i].textContent;
+            display.textContent = x;
+        };
 });
 };
 
@@ -192,7 +192,6 @@ const plus = document.getElementsByClassName("plus")[0];
         };
         numTooBig ();
     });
-
 
 const minus = document.getElementsByClassName("minus")[0];
 minus.addEventListener("click", () => {
