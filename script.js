@@ -1,11 +1,9 @@
-
 //variables for calc-operations
 let x = "0";
 let y = "0";
 let operator = 0;
 
 // function for display
-
 let displayValue = 0;
 const display = document.getElementById("outerDisplay");
 display.textContent = displayValue;
@@ -13,17 +11,9 @@ const MAX_LENGTH = 11;
 
 // functions for buttons, which store the values of the pressed numbers & operators 
 const numbers = document.getElementsByClassName("number");
-
 for (let i = 0; i < numbers.length; i++) {
 
-numbers[i].addEventListener("mousedown", () => {
-    numbers[i].style.backgroundColor = "rgb(127, 211, 161)";
-});
-numbers[i].addEventListener("mouseup", () => {
-    numbers[i].style.backgroundColor = "rgb(192, 248, 214)";
-});
-
-numbers[i].addEventListener("click",() => {
+    numbers[i].addEventListener("click",() => {
    
     if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
         display.textContent = "Num too big";
@@ -44,15 +34,18 @@ numbers[i].addEventListener("click",() => {
 });
 };
 
+const numberColor = document.getElementsByClassName("numberColor");
+for (let i = 0; i < numberColor.length; i++) {
+
+    numberColor[i].addEventListener("mousedown", () => {
+        numberColor[i].style.backgroundColor = "rgb(127, 211, 161)";
+    });
+    numberColor[i].addEventListener("mouseup", () => {
+        numberColor[i].style.backgroundColor = "rgb(192, 248, 214)";
+    });
+};
+
 const com = document.getElementsByClassName("com")[0];
-
-com.addEventListener("mousedown", () => {
-    com.style.backgroundColor = "rgb(127, 211, 161)";
-});
-com.addEventListener("mouseup", () => {
-    com.style.backgroundColor = "rgb(192, 248, 214)";
-});
-
 com.addEventListener("click", () => {
     
     if (String(x).length >= MAX_LENGTH || String(y).length >= MAX_LENGTH || String(sum).length >= MAX_LENGTH) {
@@ -60,8 +53,6 @@ com.addEventListener("click", () => {
     }
     else if (y.toString().includes(".")) {
         nothing = "nope, you can't create a number with two dots.";
-        console.log(y);
-        console.log(x);
     } else if (y!=="0") {
         y = y +".";
         display.textContent = y;
@@ -79,7 +70,16 @@ com.addEventListener("click", () => {
      };
 });
 
-const plus = document.getElementsByClassName("plus")[0];
+const operatorColor = document.getElementsByClassName("operator");
+for (let i = 0; i < operatorColor.length; i++) {
+    operatorColor[i].addEventListener("mousedown", () => {
+        operatorColor[i].style.backgroundColor = "rgb(140, 140, 236)";
+        });
+        
+    operatorColor[i].addEventListener("mouseup", () => {
+        operatorColor[i].style.backgroundColor = "rgb(187, 187, 243)";
+        });
+};
 
 let sum = "0";
 let plusOperator = false;
@@ -165,15 +165,8 @@ function numTooBig () {
     };
 };
 
-plus.addEventListener("mousedown", () => {
-plus.style.backgroundColor = "rgb(140, 140, 236)";
-});
-
-plus.addEventListener("mouseup", () => {
-        plus.style.backgroundColor = "rgb(187, 187, 243)";
-});
-
-plus.addEventListener("click", () => {
+const plus = document.getElementsByClassName("plus")[0];
+    plus.addEventListener("click", () => {
         operator = "+";
         plusOperator = true;
         avoidDoubleZeroError ()  
@@ -202,15 +195,6 @@ plus.addEventListener("click", () => {
 
 
 const minus = document.getElementsByClassName("minus")[0];
-
-minus.addEventListener("mousedown", () => {
-minus.style.backgroundColor = "rgb(140, 140, 236)";
-});
-
-minus.addEventListener("mouseup", () => {
-        minus.style.backgroundColor = "rgb(187, 187, 243)";
-});
-
 minus.addEventListener("click", () => {
     operator = "-";
     minusOperator = true;
@@ -232,22 +216,12 @@ minus.addEventListener("click", () => {
         sum = (Number(x)-Number(y));
         sum = Math.round(sum *1000) / 1000;
         display.textContent = sum;
-        y = "0";
-    
+        y = "0"; 
     };
     numTooBig ();
 });
 
 const divid = document.getElementsByClassName("divid")[0];
-
-divid.addEventListener("mousedown", () => {
-divid.style.backgroundColor = "rgb(140, 140, 236)";
-});
-
-divid.addEventListener("mouseup", () => {
-        divid.style.backgroundColor = "rgb(187, 187, 243)";
-});
-
 divid.addEventListener("click", () => {
     operator = "/";
     dividOperator = true;
@@ -271,20 +245,10 @@ divid.addEventListener("click", () => {
         display.textContent = sum;
         y = "0";       
     };
-
     numTooBig ();
 });
 
 const multi = document.getElementsByClassName("multi")[0];
-
-multi.addEventListener("mousedown", () => {
-multi.style.backgroundColor = "rgb(140, 140, 236)";
-});
-
-multi.addEventListener("mouseup", () => {
-        multi.style.backgroundColor = "rgb(187, 187, 243)";
-});
-
 multi.addEventListener("click", () => {
     operator = "*";
     multiOperator = true;
@@ -312,17 +276,19 @@ multi.addEventListener("click", () => {
 });
 
 // Function for the result button
+const resultACColor = document.getElementsByClassName("resultACColor");
+for (let i=0; i< resultACColor.length; i++) {
+    
+    resultACColor[i].addEventListener("mousedown", () => {
+        resultACColor[i].style.backgroundColor = "rgb(90, 159, 224)";
+        });  
+    resultACColor[i].addEventListener("mouseup", () => {
+        resultACColor[i].style.backgroundColor = "rgb(154, 193, 230)";
+        });
+}
 
 const results = document.getElementsByClassName("result")[0];
-
-results.addEventListener("mousedown", () => {
-    results.style.backgroundColor = "rgb(90, 159, 224)";
-    });  
-results.addEventListener("mouseup", () => {
-    results.style.backgroundColor = "rgb(154, 193, 230)";
-    });
-
- results.addEventListener ("click", () => {
+results.addEventListener ("click", () => {
   
     avoidDoubleZeroError ();
     plusCalc ();
@@ -333,14 +299,6 @@ results.addEventListener("mouseup", () => {
 });
 
 const clear = document.getElementsByClassName("undo")[0];
-
-clear.addEventListener("mousedown", () => {
-    clear.style.backgroundColor = "rgb(90, 159, 224)";
-    }); 
-clear.addEventListener("mouseup", () => {
-        clear.style.backgroundColor = "rgb(154, 193, 230)";
-    });
-
 clear.addEventListener("click", () => {
 
     plusOperator = false;
